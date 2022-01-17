@@ -11,6 +11,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(),
@@ -24,7 +29,8 @@ class _HomePageState extends State<HomePage> {
                   end: Alignment.bottomRight))
               .make(),
           AppBar(
-            title: "AI Radio".text.xl4.bold.white.make(),
+            title: "AI Radio".text.xl4.bold.white.make().shimmer(
+                primaryColor: Vx.purple200, secondaryColor: Colors.white),
             centerTitle: true,
             backgroundColor: Colors.transparent,
             elevation: 0.0,
